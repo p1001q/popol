@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park Suyeon Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-navy': '#123C4A',
+            'surface-ivory': '#FDFCF9',
+            'primary-yellow': '#F7D26E',
+            'accent-red': '#C44949',
+            'accent-blue': '#1E647B',
+            'text-dark': '#123C4A',
+            'text-light': '#FDFCF9',
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            'card': '20px',
+            'btn': '14px',
+            'modal': '24px',
+            'img': '16px',
+          },
+          boxShadow: {
+            'soft': '0 8px 24px rgba(0, 0, 0, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface-ivory text-text-dark font-sans antialiased">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-ivory/80 backdrop-blur-md py-4 shadow-sm border-b border-bg-navy/5">
+  <div class="container-custom flex items-center justify-between">
+    <div class="text-xl font-bold tracking-tighter text-bg-navy">SUYEON.P</div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#about" class="nav-link text-sm font-bold text-text-dark/70 hover:text-bg-navy transition-colors">About</a>
+      <a href="#skills" class="nav-link text-sm font-bold text-text-dark/70 hover:text-bg-navy transition-colors">Skills</a>
+      <a href="#projects" class="nav-link text-sm font-bold text-text-dark/70 hover:text-bg-navy transition-colors">Projects</a>
+      <a href="#experience" class="nav-link text-sm font-bold text-text-dark/70 hover:text-bg-navy transition-colors">Experience</a>
+      <a href="#contact" class="nav-link text-sm font-bold text-text-dark/70 hover:text-bg-navy transition-colors">Contact</a>
+    </nav>
+    <button class="btn-resume">Resume</button>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center py-20 relative z-0 bg-surface-ivory">
+    <div class="container-custom text-center">
+      <div class="max-w-5xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold leading-[1.45] mb-10 break-keep text-bg-navy">
+          사용자 경험을 디테일하게 고민하는 <br />
+          <span class="text-accent-blue">프론트엔드 개발자</span>, <br />
+          <span class="text-accent-red">박수연</span>입니다.
+        </h1>
+        <p class="text-lg md:text-xl text-text-dark/70 leading-relaxed mb-12 max-w-2xl mx-auto">
+          학부 과정 속에서 구조적으로 문제를 해결하고, <br />
+          사용자에게 더 친절한 인터페이스를 만들기 위해 탐구하는 개발자입니다.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#projects" class="btn-project-hero">
+            <span>Projects</span> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#about" class="btn-outline">About Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding-about bg-surface-ivory text-text-dark relative z-10">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-5 p-8 bg-white rounded-[24px]">
+          <h2 class="text-sm font-bold uppercase tracking-widest text-accent-red mb-4">About Me</h2>
+          <h3 class="text-4xl font-bold mb-8 leading-[1.35]">
+            기본에 충실하며 <br />
+            사용자의 시선으로 <br />
+            <span class="text-accent-blue">코드를 씁니다.</span>
+          </h3>
+
+          <div class="space-y-6 mb-10">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-accent-blue/5 flex items-center justify-center text-accent-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-text-dark/50 uppercase font-bold tracking-wider">Location</p>
+                <p class="font-medium text-sm">경기도 의정부시</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-accent-blue/5 flex items-center justify-center text-accent-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-text-dark/50 uppercase font-bold tracking-wider">Email</p>
+                <p class="font-medium text-sm">qrwrer123@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="https://github.com/p1001q" target="_blank" class="flex flex-col items-center gap-2 group">
+              <div class="p-3 rounded-[14px] bg-accent-blue text-text-light group-hover:brightness-110 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </div>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-text-dark/40">GitHub</span>
+            </a>
+            <a href="https://velog.io/@p1001q/posts" target="_blank" class="flex flex-col items-center gap-2 group">
+              <div class="p-3 rounded-[14px] bg-accent-blue text-text-light group-hover:brightness-110 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </div>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-text-dark/40">Velog</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 relative">
+          <div class="relative h-[520px] flex items-start">
+            <!-- Photo Box (Background) -->
+            <div id="profile-photo" class="absolute right-[-40px] top-0 w-[300px] aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg border border-text-dark/5 z-0 cursor-pointer transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
+              <img src="https://via.placeholder.com/300x400" alt="Profile" class="w-full h-full object-cover">
+            </div>
+            <!-- Text Box (Foreground) -->
+            <div id="profile-text" class="relative z-10 w-full max-w-[520px] mt-10 bg-white p-8 rounded-[24px] shadow-2xl border-navy-thin transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
+              <p class="text-lg leading-relaxed mb-8 text-text-dark/80">
+                안녕하세요, 프론트엔드 개발자 박수연입니다. 저는 단순히 화면을 그리는 것을 넘어,
+                사용자가 웹 서비스를 이용하며 느끼는 모든 순간의 경험을 최적화하는 것에 가치를 둡니다.
+                학부 과정 동안 다양한 프로젝트를 수행하며 복잡한 문제를 구조적으로 해결하는 능력을 길러왔습니다.
+              </p>
+              <h4 class="font-bold mb-4 text-bg-navy">Core Competencies</h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="px-5 py-2 rounded-full bg-gray-100 text-text-dark/60 text-xs font-bold border border-gray-200">UI 디테일을 살리는 집요함</span>
+                <span class="px-5 py-2 rounded-full bg-gray-100 text-text-dark/60 text-xs font-bold border border-gray-200">사용자 친화적 설계 고민</span>
+                <span class="px-5 py-2 rounded-full bg-gray-100 text-text-dark/60 text-xs font-bold border border-gray-200">API 연동 경험</span>
+                <span class="px-5 py-2 rounded-full bg-gray-100 text-text-dark/60 text-xs font-bold border border-gray-200">Git Flow 기반 협업 경험</span>
+                <span class="px-5 py-2 rounded-full bg-gray-100 text-text-dark/60 text-xs font-bold border border-gray-200">기한 내 지속 개선 태도</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding bg-surface-ivory text-text-dark relative z-20">
+    <div class="container-custom">
+      <div class="max-w-3xl mb-16">
+        <h2 class="text-sm font-bold uppercase tracking-widest text-accent-red mb-4">Skills</h2>
+        <h3 class="text-4xl font-bold mb-6 text-bg-navy">기술적 전문성</h3>
+        <p class="text-text-dark/60 leading-relaxed">
+          사용자 경험을 최우선으로 생각하며, 최신 기술 트렌드를 학습하고 프로젝트에 적용하는 것을 즐깁니다.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Skill Box 1: Language -->
+        <div class="p-8 rounded-[24px] bg-white border-navy-thin transition-transform hover:-translate-y-1">
+          <h4 class="text-xl font-bold mb-8 text-accent-blue border-b border-accent-blue/10 pb-4">Language</h4>
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-medium">JavaScript</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">TypeScript</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">HTML/CSS</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skill Box 2: Frontend -->
+        <div class="p-8 rounded-[24px] bg-white border-navy-thin transition-transform hover:-translate-y-1">
+          <h4 class="text-xl font-bold mb-8 text-accent-blue border-b border-accent-blue/10 pb-4">Frontend</h4>
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-medium">React</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Tailwind CSS</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Next.js</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skill Box 3: Backend -->
+        <div class="p-8 rounded-[24px] bg-white border-navy-thin transition-transform hover:-translate-y-1">
+          <h4 class="text-xl font-bold mb-8 text-accent-blue border-b border-accent-blue/10 pb-4">Backend</h4>
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Node.js</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">NestJS</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-1"></div>
+                <div class="skill-bar-segment"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Python</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skill Box 4: Database -->
+        <div class="p-8 rounded-[24px] bg-white border-navy-thin transition-transform hover:-translate-y-1">
+          <h4 class="text-xl font-bold mb-8 text-accent-blue border-b border-accent-blue/10 pb-4">Database</h4>
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-medium">PostgreSQL</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">MongoDB</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Redis</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-1"></div>
+                <div class="skill-bar-segment"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skill Box 5: Deploy -->
+        <div class="p-8 rounded-[24px] bg-white border-navy-thin transition-transform hover:-translate-y-1">
+          <h4 class="text-xl font-bold mb-8 text-accent-blue border-b border-accent-blue/10 pb-4">Deploy</h4>
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-medium">AWS</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-1"></div>
+                <div class="skill-bar-segment"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Vercel</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Docker</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-1"></div>
+                <div class="skill-bar-segment"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skill Box 6: Tools -->
+        <div class="p-8 rounded-[24px] bg-white border-navy-thin transition-transform hover:-translate-y-1">
+          <h4 class="text-xl font-bold mb-8 text-accent-blue border-b border-accent-blue/10 pb-4">Tools</h4>
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Git</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Figma</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment active-2"></div>
+                <div class="skill-bar-segment"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Vite</span>
+              <div class="skill-bar-container w-24">
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+                <div class="skill-bar-segment active-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding bg-surface-ivory text-text-dark relative z-30">
+    <div class="container-custom">
+      <div class="text-center mb-20">
+        <h2 class="text-sm font-bold uppercase tracking-widest text-accent-red mb-4">Projects</h2>
+        <h3 class="text-4xl font-bold text-bg-navy">주요 프로젝트</h3>
+      </div>
+
+      <div class="space-y-32">
+        <!-- Project 1 -->
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="w-full lg:w-1/2">
+            <div class="mb-6">
+              <span class="px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-bg-navy text-text-light">Team</span>
+            </div>
+            <h4 class="text-3xl font-bold mb-4 text-bg-navy">UMC 9기 웹 파트 프로젝트</h4>
+            <p class="text-sm text-text-dark/40 mb-6 font-medium">2023.09 - 2023.12</p>
+            <p class="text-text-dark/70 mb-6 leading-snug text-sm">
+              디테일한 사용자 경험을 위한 웹 서비스 개발 프로젝트입니다. 디테일한 사용자 경험을 위한 웹 서비스 개발 프로젝트입니다. 디테일한 사용자 경험을 위한 웹 서비스 개발 프로젝트입니다. 디테일한 사용자 경험을 위한 웹 서비스 개발 프로젝트입니다. 디테일한 사용자 경험을 위한 웹 서비스 개발 프로젝트입니다. 디테일한 사용자 경험을 위한 웹 서비스 개발 프로젝트입니다.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md">#React</span>
+              <span class="text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md">#TypeScript</span>
+              <span class="text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md">#TailwindCSS</span>
+              <span class="text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md">#Vercel</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <button class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-text-dark/40 hover:bg-gray-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </button>
+              <button data-project="umc-9" class="btn-detail px-6 py-2 rounded-md bg-gray-200 text-text-dark/40 text-xs font-bold hover:bg-gray-300 transition-colors">상세보기</button>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <div class="aspect-[4/3] bg-gray-200 rounded-[4px] overflow-hidden">
+              <img src="https://via.placeholder.com/800x600" alt="Project 1" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+          <div class="w-full lg:w-1/2">
+            <div class="mb-6 flex justify-end">
+              <span class="px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-bg-navy text-text-light">Solo</span>
+            </div>
+            <div class="text-right">
+              <h4 class="text-3xl font-bold mb-4 text-bg-navy">나만의 색깔을 담은 포트폴리오</h4>
+              <p class="text-sm text-text-dark/40 mb-6 font-medium">2026.02.08 - 2026.03.15</p>
+              <p class="text-text-dark/70 mb-6 leading-snug text-sm">
+                나만의 색깔을 담은 반응형 포트폴리오 사이트 제작 프로젝트입니다. 피그마 사용과 리액트 학습, 그외 라이브러리 학습, AI와 플러그인 활용을 위해 제작되었습니다.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-8 justify-end">
+                <span class="text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md">#React</span>
+                <span class="text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md">#TailwindCSS</span>
+                <span class="text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md">#Figma</span>
+                <span class="text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md">#TypeScript</span>
+              </div>
+              <div class="flex items-center gap-4 justify-end">
+                <button class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-text-dark/40 hover:bg-gray-300 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                </button>
+                <button data-project="portfolio" class="btn-detail px-6 py-2 rounded-md bg-gray-200 text-text-dark/40 text-xs font-bold hover:bg-gray-300 transition-colors">상세보기</button>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <div class="aspect-[4/3] bg-gray-200 rounded-[4px] overflow-hidden">
+              <img src="https://via.placeholder.com/800x600" alt="Project 2" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section-padding bg-surface-ivory text-text-dark relative z-40 no-snap">
+    <div class="container-custom">
+      <div class="text-center mb-20">
+        <h2 class="text-sm font-bold uppercase tracking-widest text-accent-red mb-4">Experience</h2>
+        <h3 class="text-4xl font-bold">성장 기록</h3>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto">
+        <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-accent-blue/20 -translate-x-1/2 hidden md:block"></div>
+        <div class="space-y-12">
+          <!-- Experience Item 1: Education -->
+          <div class="exp-item exp-left relative flex flex-col md:flex-row items-center">
+            <div class="exp-icon absolute w-12 h-12 rounded-full bg-surface-ivory border-4 border-accent-blue flex items-center justify-center z-10 hidden md:flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-blue"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="exp-content w-full md:w-[45%] md:mr-auto md:pr-12">
+              <div class="p-8 rounded-[24px] bg-white border-navy-thin">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs font-bold uppercase tracking-widest text-accent-blue px-3 py-1 rounded-full bg-accent-blue/5">Education</span>
+                  <span class="text-sm text-text-dark/40 font-medium">2022.03 - 2027.02</span>
+                </div>
+                <h4 class="text-xl font-bold mb-1">소프트웨어 전공</h4>
+                <p class="text-text-dark/60 font-medium mb-4">서경대학교</p>
+                <ul class="space-y-2">
+                  <li class="text-sm text-text-dark/50 flex items-start gap-2">
+                    <div class="w-1 h-1 rounded-full bg-accent-blue/30 mt-2 shrink-0"></div>
+                    웹 프로그래밍 및 알고리즘 심화 학습
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2: Club -->
+          <div class="exp-item exp-right relative flex flex-col md:flex-row items-center">
+            <div class="exp-icon absolute w-12 h-12 rounded-full bg-surface-ivory border-4 border-accent-blue flex items-center justify-center z-10 hidden md:flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-blue"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="exp-content w-full md:w-[45%] md:ml-auto md:pl-12">
+              <div class="p-8 rounded-[24px] bg-white border-navy-thin">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs font-bold uppercase tracking-widest text-accent-blue px-3 py-1 rounded-full bg-accent-blue/5">Club</span>
+                  <span class="text-sm text-text-dark/40 font-medium">2025.09 - 2026.02</span>
+                </div>
+                <h4 class="text-xl font-bold mb-1">UMC 9기</h4>
+                <p class="text-text-dark/60 font-medium mb-4">대학생 연합 IT 동아리</p>
+                <ul class="space-y-2">
+                  <li class="text-sm text-text-dark/50 flex items-start gap-2">
+                    <div class="w-1 h-1 rounded-full bg-accent-blue/30 mt-2 shrink-0"></div>
+                    프론트엔드 파트 수료
+                  </li>
+                  <li class="text-sm text-text-dark/50 flex items-start gap-2">
+                    <div class="w-1 h-1 rounded-full bg-accent-blue/30 mt-2 shrink-0"></div>
+                    실무 기반의 프로젝트 협업 경험
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 3: Club -->
+          <div class="exp-item exp-left relative flex flex-col md:flex-row items-center">
+            <div class="exp-icon absolute w-12 h-12 rounded-full bg-surface-ivory border-4 border-accent-blue flex items-center justify-center z-10 hidden md:flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-blue"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="exp-content w-full md:w-[45%] md:mr-auto md:pr-12">
+              <div class="p-8 rounded-[24px] bg-white border-navy-thin">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs font-bold uppercase tracking-widest text-accent-blue px-3 py-1 rounded-full bg-accent-blue/5">Club</span>
+                  <span class="text-sm text-text-dark/40 font-medium">2026.03 - 2026.07</span>
+                </div>
+                <h4 class="text-xl font-bold mb-1">UMC 10기</h4>
+                <p class="text-text-dark/60 font-medium mb-4">대학생 연합 IT 동아리</p>
+                <ul class="space-y-2">
+                  <li class="text-sm text-text-dark/50 flex items-start gap-2">
+                    <div class="w-1 h-1 rounded-full bg-accent-blue/30 mt-2 shrink-0"></div>
+                    프론트엔드 파트장
+                  </li>
+                  <li class="text-sm text-text-dark/50 flex items-start gap-2">
+                    <div class="w-1 h-1 rounded-full bg-accent-blue/30 mt-2 shrink-0"></div>
+                    백엔드 파트 수료
+                  </li>
+                  <li class="text-sm text-text-dark/50 flex items-start gap-2">
+                    <div class="w-1 h-1 rounded-full bg-accent-blue/30 mt-2 shrink-0"></div>
+                    실무 기반의 프로젝트 협업 경험
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-surface-ivory text-text-dark relative z-50">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-widest text-accent-red mb-4">CONTACT</h2>
+          <h3 class="text-4xl font-bold mb-6 leading-tight text-bg-navy">
+            새로운 도전을 <br />
+            함께할 준비가 되어 있습니다.
+          </h3>
+          <p class="text-text-dark/60 mb-10 leading-relaxed">
+            저의 역량이 필요한 곳이라면 언제든 환영입니다. <br />
+            이메일이나 SNS를 통해 편하게 연락 주세요!
+          </p>
+
+          <div class="space-y-4">
+            <!-- Email Card -->
+            <button id="copy-email-btn" class="w-full flex items-center gap-4 p-6 rounded-[24px] bg-white border-navy-thin hover:bg-gray-50 transition-all group text-left">
+              <div class="w-12 h-12 rounded-full bg-accent-blue/5 flex items-center justify-center text-accent-blue group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <p class="text-[10px] text-text-dark/40 font-bold uppercase tracking-wider">EMAIL ME (CLICK TO COPY)</p>
+                <p class="font-bold text-bg-navy">qrwrer123@gmail.com</p>
+              </div>
+              <div id="copy-success" class="ml-auto text-[10px] font-bold text-accent-blue opacity-0 transition-opacity">COPIED!</div>
+            </button>
+
+            <!-- Social Buttons -->
+            <div class="flex gap-4">
+              <a href="https://github.com/p1001q" target="_blank" class="flex-1 flex items-center gap-3 p-5 rounded-[24px] bg-white border-navy-thin hover:bg-gray-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bg-navy"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <span class="font-bold text-sm text-bg-navy">GitHub</span>
+              </a>
+              <a href="https://velog.io/@p1001q/posts" target="_blank" class="flex-1 flex items-center gap-3 p-5 rounded-[24px] bg-white border-navy-thin hover:bg-gray-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bg-navy"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span class="font-bold text-sm text-bg-navy">Velog</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-10 rounded-[32px] border-navy-thin">
+          <form id="contact-form" class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label id="label-name" class="text-[10px] font-bold uppercase tracking-widest text-text-dark/40 ml-1 transition-colors">NAME</label>
+                <input type="text" id="name" placeholder="성함을 입력해주세요" class="contact-input w-full px-5 py-4 rounded-[14px] border border-text-dark/10 text-sm focus:outline-none focus:border-accent-blue transition-all">
+                <p id="name-error" class="text-[10px] font-bold text-accent-red ml-1 hidden">성함을 입력해주세요.</p>
+              </div>
+              <div class="space-y-2">
+                <label id="label-email" class="text-[10px] font-bold uppercase tracking-widest text-text-dark/40 ml-1 transition-colors">EMAIL</label>
+                <input type="email" id="email" placeholder="답변받으실 이메일" class="contact-input w-full px-5 py-4 rounded-[14px] border border-text-dark/10 text-sm focus:outline-none focus:border-accent-blue transition-all">
+                <p id="email-error" class="text-[10px] font-bold text-accent-red ml-1 hidden">이메일 양식이 유효하지 않습니다.</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label id="label-message" class="text-[10px] font-bold uppercase tracking-widest text-text-dark/40 ml-1 transition-colors">MESSAGE</label>
+              <textarea id="message" placeholder="메시지 내용을 입력해주세요" class="contact-input w-full px-5 py-4 rounded-[14px] border border-text-dark/10 h-40 text-sm focus:outline-none focus:border-accent-blue transition-all resize-none"></textarea>
+              <p id="message-error" class="text-[10px] font-bold text-accent-red ml-1 hidden">메시지 내용을 입력해주세요.</p>
+            </div>
+            <button type="submit" id="submit-btn" disabled class="w-full py-5 rounded-[14px] bg-primary-yellow text-text-dark font-bold text-sm hover:brightness-105 transition-all disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              메시지 전송
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="py-12 bg-surface-ivory border-t border-bg-navy/5">
+  <div class="container-custom flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="text-center md:text-left">
+      <p class="text-xl font-bold tracking-tighter text-bg-navy mb-2">SUYEON.P</p>
+      <p class="text-sm text-text-dark/40">© 2024 Park Suyeon. All rights reserved.</p>
+    </div>
+    <div class="flex gap-8">
+      <a href="#about" class="text-xs font-bold uppercase tracking-widest text-text-dark/40 hover:text-bg-navy">About</a>
+      <a href="#projects" class="text-xs font-bold uppercase tracking-widest text-text-dark/40 hover:text-bg-navy">Projects</a>
+      <a href="#experience" class="text-xs font-bold uppercase tracking-widest text-text-dark/40 hover:text-bg-navy">Experience</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Project Modal -->
+<div id="project-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-bg-navy/60 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="bg-white w-full max-w-4xl rounded-[32px] shadow-2xl overflow-hidden relative animate-modal-in">
+    <button id="close-modal" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-text-dark/40 hover:bg-gray-200 transition-colors z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="aspect-[4/3] bg-gray-100">
+        <img id="modal-image" src="https://via.placeholder.com/800x600" alt="Project Detail" class="w-full h-full object-cover">
+      </div>
+      <div class="p-10 flex flex-col">
+        <div class="mb-6">
+          <span id="modal-badge" class="px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-bg-navy text-text-light">Team</span>
+        </div>
+        <h4 id="modal-title" class="text-3xl font-bold mb-4 text-bg-navy">Project Title</h4>
+        <p id="modal-date" class="text-sm text-text-dark/40 mb-6 font-medium">2023.09 - 2023.12</p>
+        <div class="flex-grow">
+          <p id="modal-description" class="text-text-dark/70 leading-relaxed mb-8">
+            프로젝트에 대한 상세 설명이 이곳에 들어갑니다. 사용한 기술 스택과 주요 기능, 해결한 문제 등을 상세히 기술할 수 있습니다.
+          </p>
+        </div>
+        <div id="modal-tags" class="flex flex-wrap gap-2 mb-8">
+          <!-- Tags will be injected here -->
+        </div>
+        <div class="flex items-center gap-4">
+          <a id="modal-github" href="#" target="_blank" class="flex-1 py-4 rounded-[14px] bg-bg-navy text-text-light font-bold text-sm text-center hover:brightness-110 transition-all">GitHub</a>
+          <a id="modal-demo" href="#" target="_blank" class="flex-1 py-4 rounded-[14px] bg-primary-yellow text-text-dark font-bold text-sm text-center hover:brightness-105 transition-all">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Notification Toast -->
+<div id="notification">
+  <span id="notification-icon"></span>
+  <span id="notification-text"></span>
+</div>
+
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Lenis Smooth Scroll SDK -->
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    // Replace with your actual Public Key from EmailJS Dashboard
+    emailjs.init({
+      publicKey: "YOUR_PUBLIC_KEY",
+    });
+  })();
+</script>
+
+<script>
+  // Initialize Lenis for smooth momentum scrolling
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    orientation: 'vertical',
+    gestureOrientation: 'vertical',
+    smoothWheel: true,
+    wheelMultiplier: 1,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
+  })
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
+
+  // Intersection Observer for active section highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const observerOptions = {
+    root: null,
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+
+  // Experience Scroll Animation Logic
+  const expItems = document.querySelectorAll('.exp-item');
+  const expObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        // Stop observing once shown to keep it visible
+        expObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  expItems.forEach(item => expObserver.observe(item));
+
+  // Profile Photo Animation Logic
+  const profilePhoto = document.getElementById('profile-photo');
+  const profileText = document.getElementById('profile-text');
+
+  profilePhoto.addEventListener('mouseenter', () => {
+    profilePhoto.style.transform = 'scale(1.02) rotate(2deg)';
+    profileText.style.transform = 'translateX(-100px)';
+  });
+
+  profilePhoto.addEventListener('mouseleave', () => {
+    profilePhoto.style.transform = 'scale(1) rotate(0deg)';
+    profileText.style.transform = 'translateX(0)';
+  });
+
+  // Email Copy Logic
+  const copyBtn = document.getElementById('copy-email-btn');
+  const copySuccess = document.getElementById('copy-success');
+
+  copyBtn.addEventListener('click', () => {
+    const email = "qrwrer123@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      copySuccess.style.opacity = '1';
+      setTimeout(() => {
+        copySuccess.style.opacity = '0';
+      }, 2000);
+    });
+  });
+
+  // Project Modal Logic
+  const modal = document.getElementById('project-modal');
+  const closeModalBtn = document.getElementById('close-modal');
+  const projectButtons = document.querySelectorAll('.btn-detail');
+
+  const projectData = {
+    'umc-9': {
+      title: 'UMC 9기 웹 파트 프로젝트',
+      date: '2023.09 - 2023.12',
+      badge: 'Team',
+      description: '디테일한 사용자 경험을 위한 웹 서비스 개발 프로젝트입니다. React와 TypeScript를 기반으로 복잡한 상태 관리를 효율적으로 처리하였으며, 사용자 피드백을 반영한 UI 개선 작업을 수행했습니다.',
+      tags: ['#React', '#TypeScript', '#TailwindCSS', '#Vercel'],
+      image: 'https://via.placeholder.com/800x600',
+      github: 'https://github.com',
+      demo: 'https://demo.com'
+    },
+    'portfolio': {
+      title: '나만의 색깔을 담은 포트폴리오',
+      date: '2026.02.08 - 2026.03.15',
+      badge: 'Solo',
+      description: '나만의 색깔을 담은 반응형 포트폴리오 사이트 제작 프로젝트입니다. 피그마 사용과 리액트 학습, 그외 라이브러리 학습, AI와 플러그인 활용을 위해 제작되었습니다. 스크롤 스냅과 인터랙티브한 애니메이션을 통해 생동감 있는 사용자 경험을 제공합니다.',
+      tags: ['#React', '#TailwindCSS', '#Figma', '#TypeScript'],
+      image: 'https://via.placeholder.com/800x600',
+      github: 'https://github.com',
+      demo: 'https://demo.com'
+    }
+  };
+
+  const openModal = (projectId) => {
+    const data = projectData[projectId];
+    if (!data) return;
+
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-date').textContent = data.date;
+    document.getElementById('modal-badge').textContent = data.badge;
+    document.getElementById('modal-description').textContent = data.description;
+    document.getElementById('modal-image').src = data.image;
+    document.getElementById('modal-github').href = data.github;
+    document.getElementById('modal-demo').href = data.demo;
+
+    const tagsContainer = document.getElementById('modal-tags');
+    tagsContainer.innerHTML = '';
+    data.tags.forEach(tag => {
+      const span = document.createElement('span');
+      span.className = 'text-[10px] font-bold px-3 py-1.5 bg-gray-100 text-text-dark/60 rounded-md';
+      span.textContent = tag;
+      tagsContainer.appendChild(span);
+    });
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+  };
+
+  projectButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const projectId = btn.getAttribute('data-project');
+      openModal(projectId);
+    });
+  });
+
+  closeModalBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Contact form functionality
+  const contactForm = document.getElementById('contact-form');
+  const inputs = contactForm.querySelectorAll('.contact-input');
+  const submitBtn = document.getElementById('submit-btn');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+  const nameError = document.getElementById('name-error');
+  const emailError = document.getElementById('email-error');
+  const messageError = document.getElementById('message-error');
+  const notification = document.getElementById('notification');
+  const notificationIcon = document.getElementById('notification-icon');
+  const notificationText = document.getElementById('notification-text');
+
+  const showNotification = (message, type) => {
+    notificationText.textContent = message;
+    notificationIcon.textContent = type === 'success' ? '🔵✅' : '❌';
+    notification.classList.add('show');
+    setTimeout(() => {
+      notification.classList.remove('show');
+    }, 3000);
+  };
+
+  const validateEmail = (email) => {
+    return String(email)
+            .toLowerCase()
+            .match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+  };
+
+  const checkInputValidity = (input) => {
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    // If all fields are empty, don't show any errors
+    if (name === '' && email === '' && message === '') {
+      inputs.forEach(inp => {
+        inp.classList.remove('border-accent-red');
+        inp.classList.add('border-text-dark/10');
+        const err = document.getElementById(`${inp.id}-error`);
+        const lbl = document.getElementById(`label-${inp.id}`);
+        if (err) err.classList.add('hidden');
+        if (lbl) lbl.classList.remove('label-error');
+      });
+      return;
+    }
+
+    // If at least one field is filled, validate all fields
+    inputs.forEach(inp => {
+      const val = inp.value.trim();
+      let isFieldValid = true;
+      let errorEl = document.getElementById(`${inp.id}-error`);
+      let labelEl = document.getElementById(`label-${inp.id}`);
+
+      if (val === '') {
+        isFieldValid = false;
+        if (errorEl) {
+          errorEl.textContent = inp.id === 'email' ? '이메일을 입력해주세요.' : '내용을 입력해주세요.';
+          errorEl.classList.remove('hidden');
+        }
+      } else if (inp.id === 'email' && !validateEmail(val)) {
+        isFieldValid = false;
+        if (errorEl) {
+          errorEl.textContent = '이메일 양식이 유효하지 않습니다.';
+          errorEl.classList.remove('hidden');
+        }
+      } else {
+        if (errorEl) errorEl.classList.add('hidden');
+      }
+
+      if (!isFieldValid) {
+        inp.classList.add('border-accent-red');
+        inp.classList.remove('border-text-dark/10');
+        if (labelEl) labelEl.classList.add('label-error');
+      } else {
+        inp.classList.remove('border-accent-red');
+        inp.classList.add('border-text-dark/10');
+        if (labelEl) labelEl.classList.remove('label-error');
+      }
+    });
+  };
+
+  const validateForm = () => {
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    const isEmailValid = validateEmail(email);
+    const allFilled = name !== '' && email !== '' && message !== '';
+
+    submitBtn.disabled = !(allFilled && isEmailValid);
+  };
+
+  inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+      input.style.backgroundColor = 'transparent';
+    });
+
+    input.addEventListener('blur', () => {
+      if (input.value.trim() === '') {
+        input.style.backgroundColor = 'var(--color-sky-light)';
+      }
+      checkInputValidity(input);
+      validateForm();
+    });
+
+    input.addEventListener('input', () => {
+      if (input.value.trim() !== '') {
+        input.style.backgroundColor = 'transparent';
+      }
+
+      // Real-time validation only if it was already marked as error or if it's becoming valid
+      const errorElement = document.getElementById(`${input.id}-error`);
+      const labelElement = document.getElementById(`label-${input.id}`);
+
+      if (input.value.trim() !== '') {
+        if (input.id !== 'email' || validateEmail(input.value.trim())) {
+          input.classList.remove('border-accent-red');
+          input.classList.add('border-text-dark/10');
+          if (errorElement) errorElement.classList.add('hidden');
+          if (labelElement) labelElement.classList.remove('label-error');
+        }
+      }
+      validateForm();
+    });
+
+    // Enter key navigation
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        if (input.id === 'name') emailInput.focus();
+        else if (input.id === 'email') messageInput.focus();
+      }
+    });
+  });
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const btnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "보내는 중...";
+
+    const templateParams = {
+      from_name: nameInput.value,
+      from_email: emailInput.value,
+      message: messageInput.value,
+      to_email: 'qrwrer123@gmail.com'
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(() => {
+              showNotification('메시지 전송 성공!', 'success');
+              contactForm.reset();
+              inputs.forEach(input => {
+                input.style.backgroundColor = 'var(--color-sky-light)';
+                input.classList.remove('border-accent-red');
+                input.classList.add('border-text-dark/10');
+                const err = document.getElementById(`${input.id}-error`);
+                const lbl = document.getElementById(`label-${input.id}`);
+                if (err) err.classList.add('hidden');
+                if (lbl) lbl.classList.remove('label-error');
+              });
+              validateForm();
+            }, (error) => {
+              console.error('FAILED...', error);
+              showNotification('메시지 전송 실패', 'error');
+            })
+            .finally(() => {
+              submitBtn.innerHTML = btnText;
+              submitBtn.disabled = false;
+            });
+  });
+</script>
+</body>
+</html>
+
