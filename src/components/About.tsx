@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import profileImg from '../assets/profile.jpg';
 
 const COMPETENCIES = [
   'UI 디테일을 살리는 집요함',
@@ -88,7 +89,7 @@ export default function About() {
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
               >
-                <img src="https://via.placeholder.com/300x400" alt="Profile" className="w-full h-full object-cover" />
+                <img src={profileImg} alt="Profile" className="w-full h-full object-cover" />
               </div>
               {/* Text box (foreground) */}
               <div
