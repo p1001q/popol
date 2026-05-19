@@ -4,9 +4,9 @@ import emailjs from '@emailjs/browser';
 type FormValues = { name: string; email: string; message: string };
 type FormErrors = { name: string; email: string; message: string };
 
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
 
 function validateEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
@@ -64,7 +64,7 @@ export default function Contact() {
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        { from_name: values.name, from_email: values.email, message: values.message, to_email: EMAIL },
+        { name: values.name, email: values.email, message: values.message },
         { publicKey: EMAILJS_PUBLIC_KEY }
       );
       showToast('메시지 전송 성공!', 'success');
