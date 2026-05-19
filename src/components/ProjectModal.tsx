@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { type Project } from '../data/projects';
+import { useLenis } from '../context/LenisContext';
 
 interface Props {
   project: Project;
@@ -7,17 +9,19 @@ interface Props {
 }
 
 export default function ProjectModal({ project, onClose }: Props) {
+  const lenis = useLenis();
+
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    lenis?.stop();
     const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', handleKey);
     return () => {
-      document.body.style.overflow = '';
+      lenis?.start();
       window.removeEventListener('keydown', handleKey);
     };
-  }, [onClose]);
+  }, [onClose, lenis]);
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] overflow-y-auto bg-bg-navy/60 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
@@ -75,6 +79,7 @@ export default function ProjectModal({ project, onClose }: Props) {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
